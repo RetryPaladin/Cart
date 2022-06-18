@@ -3,7 +3,7 @@ const categorSort = document.querySelector('.category-sort')
 
 async function getBooks() {
 
-  const response = await fetch('http://myjson.dit.upm.es/api/bins/2uln')
+  const response = await fetch('https://myjson.dit.upm.es/api/bins/2uln')
   
   const productsArray = await response.json()
 
