@@ -66,12 +66,7 @@ function nameDisplayCheck() {
     toggleCart()
     calcPrice()
   }
-
-  //Обновляение изначальной суммы путем сбрасывания клиента
-  const stopClient = document.querySelector('#stop-client')
-  stopClient.addEventListener('click', () => {
-    localStorage.removeItem('name');
-  })
+  
 
 }
 
@@ -199,6 +194,45 @@ sortClick.addEventListener('click', () => {
 })
 
 
+const sortUp = document.querySelector('#up')
+const sortDown = document.querySelector('#down')
+const sortEnd = document.querySelector('#end-sort')
+
+
+
+
+//Сортировка по возростанию
+
+function insertAfter(elem, refElem) {
+  return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+}
+
+sortUp.addEventListener('click', function mySortUp() {
+  let item = document.querySelector('.product__inner')
+  for (let i = 0; i < item.children.length; i++){
+    for (let j = i; j < item.children.length; j++) {
+      if (+item.children[i].getAttribute('data-myorder') > +item.children[j].getAttribute('data-myorder')) {
+        replaceNode = item.replaceChild(item.children[j], item.children[i]);
+        insertAfter(replaceNode, item.children[i])
+      }
+    }
+  }
+})
+
+sortDown.addEventListener('click', function mySortUp() {
+  let item = document.querySelector('.product__inner')
+  for (let i = 0; i < item.children.length; i++) {
+    for (let j = i; j < item.children.length; j++) {
+      if (+item.children[i].getAttribute('data-myorder') < +item.children[j].getAttribute('data-myorder')) {
+        replaceNode = item.replaceChild(item.children[j], item.children[i]);
+        insertAfter(replaceNode, item.children[i])
+      }
+    }
+  }
+})
+
+
+
 
 //сортировка по категориям
 $('.category-sort .category__item').on('click', function () {
@@ -210,6 +244,8 @@ $('.category-sort .category__item').on('click', function () {
     $('.product__inner .product__item[data-filter="' + cat + '"]').show(); // и отображаем 
   }
 });
+
+
 
 //Выводим и прячем сообщения о покупке
 const msRight = document.querySelector('.massege__right')
@@ -225,7 +261,4 @@ buttonWrong.addEventListener('click', () => {
 
   msWrong.classList.toggle('active')
 })
-
-
-
 
