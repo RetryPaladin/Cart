@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 24px;
 }
@@ -10,9 +10,11 @@ body {
   margin: 0 auto;
 }
 
-.cart.active {
+
+.cart.active{
   transform: translateX(0px);
 }
+
 
 .toggle__real {
   position: absolute;
@@ -22,11 +24,11 @@ body {
   appearance: none;
 }
 
-.toggle__real:checked + .toggle-fake {
-  background-color: #ffe074;
+.toggle__real:checked+.toggle-fake {
+  background-color: #FFE074;
 }
 
-.toggle__real:checked + .toggle-fake::before {
+.toggle__real:checked+.toggle-fake::before {
   left: 20px;
 }
 
@@ -40,7 +42,7 @@ body {
   vertical-align: bottom;
   width: 37px;
   height: 20px;
-  background: #c4c4c4;
+  background: #C4C4C4;
   border-radius: 7px;
 }
 
@@ -51,7 +53,7 @@ body {
   content: "";
   width: 16px;
   height: 16px;
-  background: #3c3c3c;
+  background: #3C3C3C;
   border-radius: 50%;
   transition: all 0.2s ease-in;
 }
@@ -63,7 +65,7 @@ body {
   color: #000000;
 }
 
-.toggle__real:checked ~ .toggle-title {
+.toggle__real:checked~.toggle-title {
   font-weight: 400;
   font-style: 16px;
   line-height: 19px;
@@ -76,11 +78,12 @@ body {
   z-index: 9;
   right: 5%;
   top: 12%;
-  z-index: 1;
+  z-index: 50;
   border: none;
   align-items: center;
   justify-content: center;
 }
+
 
 .menu-icon {
   position: relative;
@@ -93,7 +96,7 @@ body {
   position: absolute;
   left: 0;
   top: -10px;
-  content: "";
+  content: '';
   width: 30px;
   height: 5px;
   background-color: #000;
@@ -104,7 +107,7 @@ body {
   position: absolute;
   left: 0;
   top: 10px;
-  content: "";
+  content: '';
   width: 30px;
   height: 5px;
   background-color: #000;
@@ -135,7 +138,7 @@ body {
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 
-.product__item.hide {
+.product__item.hide{
   display: none;
 }
 
@@ -143,24 +146,27 @@ body {
   display: none;
 
   color: green;
+
 }
 
 .massege__right.active {
-  display: flex;
+   display: flex;
 }
 
-#right {
+#right{
+
   border: 5px solid green;
   color: green;
+
 }
 
-#right:hover {
+#right:hover{
   background-color: green;
   color: #fff;
 }
 
-.massege {
-  flex-direction: column;
+.massege{
+    flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -171,21 +177,24 @@ body {
   z-index: 10;
 }
 
+
 .massege__right.active {
-  display: flex;
+   display: flex;
 }
 
-#wrong {
+#wrong{
+
   border: 5px solid red;
   color: red;
+
 }
 
-#wrong:hover {
+#wrong:hover{
   background-color: red;
   color: #fff;
 }
 
-.button__massege {
+.button__massege{
   margin-top: 10px;
   padding: 10px;
   border: none;
@@ -195,38 +204,23 @@ body {
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.7s;
+  transition: all .7s;
 }
 
-.massege__wrong {
+
+.massege__wrong{
   display: none;
   text-align: center;
   color: red;
 }
 
-.massege__wrong.active {
+.massege__wrong.active{
   display: flex;
 }
 
 
-.filter {
-   path {
-    padding: 2px;
-  }
-}
 
-.option__sort:hover {
- path {
-    fill: gray;
-  }
 
-   path:first-child {
-    fill: gray;
-    transform: translateY(-1px);
-  }
 
-  path:last-child {
-    fill: gray;
-    transform: translateY(1px);
-  }
-}
+
+
